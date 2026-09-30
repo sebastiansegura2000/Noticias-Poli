@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Detalle de noticia - NEWS POLI.">
+  <title>NEWS POLI | Detalle de noticia</title>
+  <link rel="stylesheet" href="../assets/styles/noticias.css">
+  <link rel="stylesheet" href="../assets/styles/detalle.css">
+</head>
+<body class="np-page">
+  <header class="np-header">
+    <div class="np-shell np-header__inner">
+      <a class="np-brand" href="noticias.html" aria-label="NEWS POLI - Noticias">
+        <span class="np-brand__mark" aria-hidden="true">N</span>
+        <span class="np-brand__name">NEWS POLI</span>
+      </a>
+
+      <button class="np-nav-toggle" type="button" aria-expanded="false" aria-controls="np-main-nav">
+        <span class="np-nav-toggle__label">Menú</span>
+        <span class="np-nav-toggle__bars" aria-hidden="true"></span>
+      </button>
+
+      <nav class="np-nav" id="np-main-nav" aria-label="Navegación principal">
+        <a class="np-nav__link" href="noticias.html#inicio">Inicio</a>
+        <a class="np-nav__link is-active" href="noticias.html#noticias" aria-current="page">Noticias</a>
+        <a class="np-nav__link" href="noticias.html#favoritos">Favoritos</a>
+        <a class="np-nav__link" href="contacto.html">Contacto</a>
+        <a class="np-nav__cta" href="noticias.html#np-more-news">EXPLORAR</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="np-main">
+    <div class="np-shell">
+      <section class="np-intro" aria-labelledby="np-page-title">
+        <h1 class="np-intro__title" id="np-page-title">Últimas noticias</h1>
+        <p class="np-intro__subtitle">Información relevante, actual y cercana.</p>
+      </section>
+
+      <p class="np-detail-status" id="np-detail-status" role="status" aria-live="polite">Cargando noticia...</p>
+
+      <article class="np-news-card np-detail" id="np-detail" hidden>
+        <div class="np-detail__content">
+          <p class="np-news-meta" id="np-detail-meta"></p>
+          <h2 class="np-detail__title" id="np-detail-title"></h2>
+          <p class="np-detail__author" id="np-detail-author"></p>
+          <div class="np-detail__text" id="np-detail-text"></div>
+
+          <div class="np-card-actions np-detail__actions">
+            <a class="np-action" href="noticias.html">← Volver al listado</a>
+            <button class="np-action np-detail__fav-text" id="np-detail-fav-text" type="button" aria-pressed="false">Agregar a favoritos</button>
+          </div>
+        </div>
+
+        <figure class="np-detail__media">
+          <img id="np-detail-image" src="" alt="">
+          <button class="np-favorite np-favorite--media" id="np-detail-fav" type="button" aria-pressed="false" aria-label="Agregar a favoritos">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78Z"/>
+            </svg>
+          </button>
+        </figure>
+      </article>
+
+      <section class="np-more" id="np-detail-related" aria-labelledby="np-related-title" hidden>
+        <div class="np-section-heading">
+          <h2 class="np-section-heading__title" id="np-related-title">Más noticias</h2>
+          <span class="np-section-heading__line" aria-hidden="true"></span>
+        </div>
+        <div class="np-detail-related__grid" id="np-detail-related-grid"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="np-footer">
+    <div class="np-shell np-footer__inner">
+      <div>
+        <p class="np-footer__brand">NEWS POLI</p>
+        <p class="np-footer__tagline">Información que importa.</p>
+      </div>
+      <div class="np-footer__meta">
+        <p>© 2026 News Poli</p>
+        <p>Proyecto académico · Desarrollo Front-end</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="np-toast" id="np-toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="../assets/js/detalle.js" defer></script>
+</body>
+</html>
