@@ -1,4 +1,4 @@
-// NEWS POLI - Vista Detalle: lee ?id= (o ?slug=) y pinta la noticia desde noticias.json.
+// NEWS POLI - Vista Detalle: lee ?id= (o ?slug=) y pinta la noticia desde noticiaas.json.
 (() => {
   'use strict';
 

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NEWS POLI | Inicio</title>
+  <meta name="description" content="Inicio de NEWS POLI: últimas noticias de tecnología, educación, turismo y comercio.">
+  <!-- Se reutiliza noticias.css: header, footer y tarjetas idénticos al Listado -->
+  <link rel="stylesheet" href="../assets/styles/noticias.css">
+  <link rel="stylesheet" href="../assets/styles/inicio.css">
+</head>
+<body class="np-page ni-home">
+
+  <!-- ENCABEZADO (idéntico al de noticias.html) -->
+  <header class="np-header">
+    <div class="np-shell np-header__inner">
+      <a class="np-brand" href="inicio.html" aria-label="NEWS POLI, ir a Inicio">
+        <span class="np-brand__mark">N</span>
+        <span class="np-brand__name">NEWS POLI</span>
+      </a>
+      <button class="np-nav-toggle" type="button" aria-expanded="false" aria-controls="np-main-nav">
+        <span class="np-nav-toggle__label">Menú</span>
+        <span class="np-nav-toggle__bars"></span>
+      </button>
+      <nav class="np-nav" id="np-main-nav" aria-label="Navegación principal">
+        <a class="np-nav__link is-active" href="inicio.html" aria-current="page">Inicio</a>
+        <a class="np-nav__link" href="noticias.html#noticias">Noticias</a>
+        <a class="np-nav__link" href="noticias.html#favoritos">Favoritos</a>
+        <a class="np-nav__link" href="contacto.html">Contacto</a>
+        <a class="np-nav__cta" href="noticias.html#np-more-news">EXPLORAR</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTENIDO -->
+  <main class="np-main">
+    <div class="np-shell">
+      <section class="np-intro">
+        <h1 class="np-intro__title">Últimas noticias</h1>
+        <p class="np-intro__subtitle">Información relevante, actual y cercana. Periodismo independiente para un panorama en constante evolución.</p>
+      </section>
+
+      <!-- Barra de búsqueda y filtros (mockup) -->
+      <section class="np-toolbar ni-toolbar" aria-label="Buscar y filtrar noticias">
+        <label class="np-search">
+          <span class="np-visually-hidden">Buscar noticias</span>
+          <span class="np-search__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span>
+          <input class="np-search__input" id="ni-search" type="search" placeholder="Buscar noticias...">
+        </label>
+        <div class="np-filters" id="ni-filters">
+          <button class="np-filter is-active" type="button" data-cat="Todas">Todas</button>
+          <button class="np-filter" type="button" data-cat="Tecnología">Tecnología</button>
+          <button class="np-filter" type="button" data-cat="Educación">Educación</button>
+          <button class="np-filter" type="button" data-cat="Turismo">Turismo</button>
+          <button class="np-filter" type="button" data-cat="Comercio">Comercio</button>
+        </div>
+      </section>
+      <p class="ni-empty" id="ni-empty" hidden>No encontramos noticias con esa búsqueda. Prueba con otra palabra o categoría.</p>
+
+      <section class="np-editorial" aria-label="Noticias destacadas">
+        <div class="np-featured-slot" id="ni-featured"></div>
+        <div class="np-secondary-list" id="ni-secondary"></div>
+      </section>
+
+      <section class="np-more" id="np-more-news" aria-labelledby="ni-more-title">
+        <div class="np-section-heading">
+          <h2 class="np-section-heading__title" id="ni-more-title">Más noticias</h2>
+          <a class="np-action ni-archive" href="noticias.html">Ver archivo completo</a>
+        </div>
+        <div class="np-news-grid" id="ni-grid"></div>
+      </section>
+
+      <!-- Suscripción -->
+      <section class="ni-sub" aria-labelledby="ni-sub-title">
+        <div>
+          <h2 id="ni-sub-title">Mantente informado con NEWS POLI</h2>
+          <p>Recibe las crónicas, debates profundos y reportajes independientes más destacados directamente en tu correo. Sin costo, cada mañana.</p>
+        </div>
+        <div>
+          <form id="ni-form" novalidate>
+            <label class="np-visually-hidden" for="ni-mail">Correo electrónico</label>
+            <input id="ni-mail" type="email" placeholder="tu.correo@ejemplo.com" autocomplete="email">
+            <button type="submit">Suscribirme</button>
+          </form>
+          <p class="ni-msg" id="ni-msg" role="status" aria-live="polite"></p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- PIE DE PÁGINA (idéntico al de noticias.html) -->
+  <footer class="np-footer">
+    <div class="np-shell np-footer__inner">
+      <div>
+        <p class="np-footer__brand">NEWS POLI</p>
+        <p class="np-footer__tagline">Información que importa.</p>
+      </div>
+      <div class="np-footer__meta">
+        <p>© 2026 News Poli</p>
+        <p>Proyecto académico · Desarrollo Front-end</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="np-toast" id="ni-toast" role="status" aria-live="polite"></div>
+  <noscript><div class="np-noscript">NEWS POLI necesita JavaScript habilitado para cargar las noticias.</div></noscript>
+
+  <!-- Librería jQuery (CDN) y script de la página -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="../assets/js/inicio.js"></script>
+</body>
+</html>
